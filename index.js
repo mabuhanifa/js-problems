@@ -1,3 +1,9 @@
-const { log: print } = console;
+const { log } = console;
 
-print("Hello World");
+log("Hello World");
+
+var constant = "constant";
+
+let constants = "constant";
+
+log("hello world");
