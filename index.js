@@ -10,4 +10,12 @@ function findTarget(target, array) {
   }
 }
 
-log(findTarget(9, [2, 7, 11, 15]));
+const stringToNum = (str) => {
+  return str
+    .split("")
+    .filter((s) => !isNaN(s))
+    .map((num) => Number(num))
+    .reduce((a, c) => c + a, 0);
+};
+
+log(stringToNum("d31er3ts4t4f5j5t4"));
