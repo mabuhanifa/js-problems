@@ -18,4 +18,8 @@ const stringToNum = (str) => {
     .reduce((a, c) => c + a, 0);
 };
 
-log(stringToNum("d31er3ts4t4f5j5t4"));
+const flat = (arr) => {
+  return arr.flat(Infinity);
+};
+
+log(flat([1, 2, [1, 2], 1, 2, 3]));
