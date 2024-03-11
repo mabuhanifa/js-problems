@@ -22,4 +22,11 @@ const flat = (arr) => {
   return arr.flat(Infinity);
 };
 
-log(flat([1, 2, [1, 2], 1, 2, 3]));
+const recursiveFactorial = (n) => {
+  if (n === 0) {
+    return 1;
+  }
+  return n * recursiveFactorial(n - 1);
+};
+
+log(recursiveFactorial(10));
