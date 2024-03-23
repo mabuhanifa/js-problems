@@ -9,6 +9,19 @@ function findTarget(target, array) {
     }
   }
 }
+function findTarget(target, array) {
+  const map = {};
+
+  for (let i = 0; i < array.length; i++) {
+    const complement = target - array[i];
+    if (map[complement] !== undefined) {
+      return [map[complement], i];
+    }
+    map[array[i]] = i;
+  }
+
+  return null;
+}
 
 const stringToNum = (str) => {
   return str
