@@ -9,6 +9,7 @@ function findTarget(target, array) {
     }
   }
 }
+
 function findTarget(target, array) {
   const map = {};
 
