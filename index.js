@@ -33,7 +33,15 @@ const stringToNum = (str) => {
 };
 
 const flat = (arr) => {
-  return arr.flat(Infinity);
+  let a = arr.flat(Infinity);
+  let l = a.length;
+  let b = 0;
+  for (let i = 0; i < l; i++) {
+    if (Boolean(a[i])) {
+      b++;
+    }
+  }
+  return b;
 };
 
 const recursiveFactorial = (n) => {
