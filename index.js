@@ -73,3 +73,21 @@ function test_prime(n) {
   }
 }
 console.log(test_prime(37));
+
+function countWords(str) {
+  let count = 0;
+  let isWord = false;
+
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] !== " ") {
+      if (!isWord) {
+        count++;
+        isWord = true;
+      }
+    } else {
+      isWord = false;
+    }
+  }
+
+  return count;
+}
