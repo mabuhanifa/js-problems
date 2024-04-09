@@ -122,3 +122,25 @@ function removeArrayElement(filterField) {
 }
 
 console.log(`filtered array: ${removeArrayElement(filterField)}`);
+let digits = [6, 1, 4, 5, 3, 9, 0, 1, 9, 5, 1, 8, 6, 7, 0, 5, 5, 4, 3];
+
+let plusOne = function (digits) {
+  let result = [];
+  let str = "";
+
+  for (let i = 0; i < digits.length; i++) {
+    str += digits[i];
+  }
+
+  let incrementNumber = str * 1 + 1;
+
+  result = incrementNumber
+    .toString()
+    .split("")
+    .map((i) => Number(i));
+
+  // final Array
+  return result;
+};
+
+console.log(plusOne(digits));
