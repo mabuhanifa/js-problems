@@ -122,6 +122,7 @@ function removeArrayElement(filterField) {
 }
 
 console.log(`filtered array: ${removeArrayElement(filterField)}`);
+
 let digits = [6, 1, 4, 5, 3, 9, 0, 1, 9, 5, 1, 8, 6, 7, 0, 5, 5, 4, 3];
 
 let plusOne = function (digits) {
@@ -144,3 +145,15 @@ let plusOne = function (digits) {
 };
 
 console.log(plusOne(digits));
+
+function getMiddle(s) {
+  if (s.length % 2 === 0) {
+    let middleLength = Math.round(s.length / 2);
+    return s.charAt(middleLength) + s.charAt(middleLength - 1);
+  } else {
+    let midLength = s.length / 2;
+    return s.charAt(midLength);
+  }
+}
+
+getMiddle("middle");
