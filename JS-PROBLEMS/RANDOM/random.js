@@ -157,3 +157,12 @@ function getMiddle(s) {
 }
 
 getMiddle("middle");
+
+// Palindrome
+function isPalindrome(num) {
+  const temp = num.toString().split("").reverse().join("") * 1;
+  return (result = num === parseInt(temp) ? true : false);
+}
+
+console.log(isPalindrome(151));
+console.log(isPalindrome(324));
