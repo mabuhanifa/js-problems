@@ -15,3 +15,16 @@ const fruitCount = fruits.reduce((acc, fruit) => {
   return acc;
 }, {});
 console.log(fruitCount);
+
+const people = [
+  { name: "Alice", age: 30 },
+  { name: "Bob", age: 25 },
+  { name: "Charlie", age: 35 },
+  { name: "Alice", age: 40 },
+];
+const groupedByName = people.reduce((acc, person) => {
+  acc[person.name] = acc[person.name] || [];
+  acc[person.name].push(person);
+  return acc;
+}, {});
+console.log(groupedByName);
