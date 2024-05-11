@@ -28,3 +28,16 @@ const groupedByName = people.reduce((acc, person) => {
   return acc;
 }, {});
 console.log(groupedByName);
+
+const add = (a, b) => a + b;
+const subtract = (a, b) => a - b;
+const multiply = (a, b) => a * b;
+
+const operations = [add, subtract, multiply];
+const numbers = [1, 2, 3, 4];
+
+const result = operations.reduce(
+  (acc, fn) => fn(acc, numbers[operations.indexOf(fn)]),
+  numbers[0]
+);
+console.log(result);
