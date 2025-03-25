@@ -21,7 +21,7 @@ function deconstructMongoId(objectId) {
 
   // Convert timestamp (hex) to decimal (seconds)
   const timestamp = parseInt(timestampHex, 16);
-  const date = new Date(timestamp * 1000); // Convert seconds to milliseconds
+  const date = new Date(timestamp * 1000);
 
   return {
     objectId,
